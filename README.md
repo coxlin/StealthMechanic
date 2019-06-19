@@ -1,2 +1,3 @@
 # StealthMechanic
-Prototype exploring use of Unity's light data to see how much a character is in a shadow e.g. Thief, Splinter Cell
+Project that explores a simple implemntation of a Light Index mechanic similar to that found in Thief or Splinter Cell.
+
