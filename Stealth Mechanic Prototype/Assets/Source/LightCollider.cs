@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LightCollider : MonoBehaviour
 {
@@ -18,16 +16,18 @@ public class LightCollider : MonoBehaviour
         float pointCount = 0f;
         for (int i = 0; i < _lightIndex.TransformsToCheck.Length; ++i)
         {
-            var point = _lightIndex.TransformsToCheck[i].position;
+            var point = new Vector3(
+                _lightIndex.TransformsToCheck[i].position.x,
+                transform.position.y,
+                _lightIndex.TransformsToCheck[i].position.z);
+
             float dist = Vector3.Distance(transform.position, point);
             if (dist <= _collider.radius)
             {
                 pointCount++;
             }
         }
-        //Debug.Log("PointCount:" + pointCount);
         float indexAmnt = pointCount / _lightIndex.TransformsToCheck.Length;
-        Debug.Log(indexAmnt);
         _lightIndex.SetIndex(indexAmnt);
     }
 
