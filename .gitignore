@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/Stealth Mechanic Prototype/Assets/Plugins/GitHub.meta
+/Stealth Mechanic Prototype/Assets/Plugins/GitHub
